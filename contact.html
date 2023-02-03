@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with-divice-wid, initial-scale=1.0">
+    <title>Astya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+           <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+           <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="">SIGN IN</a></li>
+            </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>Contact Us</h1>
+</section>
+<!--------------------Comment------------------------->
+<section class="contact-us">
+   <div class="row">
+       <div class="contact-col">
+           <div>
+               <i class="fa-solid fa-phone"></i>
+               <span>
+                   <h5>+91 000 000 0000</h5>
+                   <p>Not Available</p>
+               </span>
+           </div>
+           <div>
+               <i class="fa-regular fa-at"></i>
+               <span>
+                   <h5>nrana.bs@gmail.com</h5>
+                   <p>Available</p>
+               </span>
+           </div>
+       </div>
+       <div class="contact-col">
+           <form class="contact_form" action="#">
+               <input class="name" type="text" placeholder="Enter Your Name" required>
+               <input class="email" type="email" placeholder="Enter Email Address" required>
+               <input class="number" type="number" placeholder="Enter Your Phone Number" required>
+               <textarea class="massage" rows="4" placeholder="Your Quary with Topic" required></textarea>
+               <button type="submit" class="hero-btn red-btn">Send Massage</button>
+           </form>
+           
+       </div>
+   </div>
+</section>
+
+
+
+<!--------------------Footer------------------------->
+<section class="footer">
+    <h4>About us</h4>
+    <P>This Website is made by an individual. The main Moto of makings this website is to help <br> students to get all the needed in one place.</P>
+    <div class="icons">
+        <a href="#">
+        <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="#">
+        <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#">
+        <i class="fa-brands fa-twitter"></i>
+        </a>
+    </div>
+    <p>Made with <i class="fa-solid fa-heart"></i> by NRana.
+    </p>
+</section>
+
+<!--------------------java------------------------->
+<script>
+    
+    var navLinks = document.getElementById("navLinks");
+    
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+    
+</script>
+
+
+<script src="https://kit.fontawesome.com/ddd3d1bc23.js" crossorigin="anonymous"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    
+    
+<script>
+ const form = document.querySelector('.contact_form');
+
+    
+
+    
+    function sendmassage(e){
+        e.preventDefault();
+        
+          const name = document.querySelector('.name'),
+                email =document.querySelector('.email'),
+                number = document.querySelector('.number'),
+                massage = document.querySelector('.massage');
+
+
+          Email.send({
+          SecureToken : "ebb9f48b-286d-43d8-84c1-90e9184734c5",
+          To : 'nrana.bs@gmail.com',
+          From : email.vaue,
+          Subject : "Website contact form",
+          Body : massage.value
+      }).then(
+          message => alert(message)
+      );
+    }
+
+    from.addEventListener('submit', sendmassage);
+
+
+
+
+
+</script>  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
